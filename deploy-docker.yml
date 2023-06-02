@@ -3,11 +3,11 @@
   become: True
   tasks:
     - name: Install python pip
-      dnf:
+      yum:
         name: python-pip
         state: present
     - name: Install docker
-      dnf:
+      yum:
         name: docker
         state: present
     - name: start docker
