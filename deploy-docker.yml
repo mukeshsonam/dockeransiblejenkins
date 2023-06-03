@@ -19,10 +19,17 @@
       pip:
         name: docker-py
         state: present
+        
+    - name: log into docker hub registry
+      docker_login:
+        email: "mukesh.kumar92ec@gmail.com"
+        username: "mukesh92"
+        password: "Welcome@1"
+        
     - name: Start the container
       docker_container:
         name: hariapp
-        image: mukesh92/hariapp:0.0.2
+        image: "mukesh92/hariapp:0.0.2"
         state: started
         pull: true
         published_ports:
