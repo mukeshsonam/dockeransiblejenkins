@@ -24,5 +24,6 @@
         name: hariapp
         image: mukesh92/hariapp:0.0.2
         state: started
+        pull: true
         published_ports:
           - 0.0.0.0:8080:8080
